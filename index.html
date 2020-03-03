@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Калькулятор расчета коммунальных услуг</title>
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
@@ -18,57 +18,57 @@
             <div class="rules">
                 <h2 class="default-title">Тарифы на коммунальные услуги</h2>
                 <ul>
-                    <li>Холодная вода: <span>18,56 руб/м<sup>3</sup></span></li>
-                    <li>Горячая вода: <span>108,19 руб/м<sup>3</sup></span></li>
-                    <li>Водоотведение: <span>14,24 руб/м<sup>3</sup></span></li>
-                    <li>Электричество: <span>2,6 руб/кВт</span></li>
+                    <li>Холодная вода ( руб/м<sup>3</sup> ): <input type="text" class="rate" id="coldWater" disabled value="18.56"></li>
+                    <li>Горячая вода ( руб/м<sup>3</sup> ): <input type="text" class="rate" id="hotWater" disabled value="108.00"></li>
+                    <li>Водоотведение ( руб/м<sup>3</sup> ): <input type="text" class="rate" id="outgoing" disabled value="14.24"></li>
+                    <li>Электричество ( руб/кВт ): <input type="text" class="rate" id="electro" disabled value="2.6"></li>
                 </ul>
             </div>
             
             <div class="expenses">
-                <h2 class="default-title">Расходы в текущем месяце:</h2>
+                <h2 class="default-title">Расходы ресурсов:</h2>
                 <span class="feild">
                     <span>Холодная вода (м<sup>3</sup>/мес.)</span>
-                    <input type="text" placeholder="0" id="cold">
+                    <input type="text" id="coldExp" placeholder="0">
                 </span>
                 <span class="feild">
                     <span>Горячая вода (м<sup>3</sup>/мес.)</span>
-                    <input type="text" placeholder="0" id="hot">
+                    <input type="text" id="hotExp"  placeholder="0">
                 </span>
                 <span class="feild">
                     <span>Водоотведение (м<sup>3</sup>/мес.)</span>
-                    <input type="text" placeholder="0" id="abduction">
+                    <input type="text" id="outgoingExp"  placeholder="0">
                 </span>
                 <span class="feild">
                     <span>Электричество (кВт/мес.)</span>
-                    <input type="text" placeholder="0" id="electricity">
+                    <input type="text" id="electroExp"  placeholder="0">
                 </span>
             </div>
 
             <div class="calculate">
-                <h2 class="default-title">Сколько платить?</h2>
-                <button class="btn">Посчитать</button>
+                <h2 class="default-title">Сколько платить в этом месяце?</h2>
+                <button class="btn" id="btn">Посчитать</button>
 
                 <div class="calculate-inner">
                     <span class="result">
                         <span>Холодная вода</span>
-                        <span class="number"></span>
+                        <input type="text" class="number" value="0" disabled id="coldRes"></input>
                     </span>
                     <span class="result">
                         <span>Горячая вода</span>
-                        <span class="number"></span>
+                        <input type="text" class="number" value="0" disabled id="hotRes"></input>
                     </span>
                     <span class="result">
                         <span>Водоотведение</span>
-                        <span class="number"></span>
+                        <input type="text" class="number" value="0" disabled id="outgoingRes"></input>
                     </span>
                     <span class="result">
                         <span>Электричество</span>
-                        <span class="number"></span>
+                        <input type="text" class="number" value="0" disabled id="electroRes"></input>
                     </span>
                     <span class="result">
                         <span>Суммарно</span>
-                        <span class="number"></span>
+                        <input type="text" class="number" value="0" disabled id="totalRes"></input>
                     </span> 
                 </div>
             </div>
